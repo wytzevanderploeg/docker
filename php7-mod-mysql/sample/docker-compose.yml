@@ -16,7 +16,7 @@ services:
     depends_on:
      - mariadb
      - mailhog
-    image: php:7.1.7-fpm-alpine-mod-mysql
+    image: vertedge/php:7.1.7-fpm-alpine-mod-mysql
     volumes:
      - .:/application
      - ./php-ini-overrides.ini:/etc/php/7.1/fpm/conf.d/99-overrides.ini
@@ -37,7 +37,7 @@ services:
   mailhog:
     image: mailhog/mailhog:latest
     ports:
-     - "127.0.0.1:1025:1025"
+#     - "127.0.0.1:1025:1025"
      - "127.0.0.1:8025:8025"
     
 volumes:

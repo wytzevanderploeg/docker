@@ -2,7 +2,7 @@
 =======================================
 
 This is an [image](https://hub.docker.com/r/vertedge/php/) based on the [php 7.1-fpm-alpine](https://hub.docker.com/_/php/) image which adds PDO support for MySQL/MariaDB.
-Below is a sample docker-compose.yml file which launches a MariaDB, PHP-FPM, Nginx and MailHog stack.
+Below is a sample docker-compose.yml file which launches a MariaDB, PHP-FPM (FastCGI Process Manager), Nginx and MailHog stack.
 
 Build scripts and sample usage can be found on [github](https://github.com/wytzevanderploeg/docker/tree/master/php7-mod-mysql).
 
@@ -25,7 +25,7 @@ services:
     depends_on:
      - mariadb
      - mailhog
-    image: php:7.1.7-fpm-alpine-mod-mysql
+    image: vertedge/php:7.1.7-fpm-alpine-mod-mysql
     volumes:
      - .:/application
      - ./php-ini-overrides.ini:/etc/php/7.1/fpm/conf.d/99-overrides.ini
