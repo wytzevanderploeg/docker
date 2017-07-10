@@ -1,10 +1,10 @@
 #PHP 7.1 with PDO MySQL/MariaDB support
 =======================================
 
-This is an image based on the [php 7.1-fpm-alpine](https://hub.docker.com/_/php/) image which adds PDO support for MySQL/MariaDB.
+This is an [image](https://hub.docker.com/r/vertedge/php/) based on the [php 7.1-fpm-alpine](https://hub.docker.com/_/php/) image which adds PDO support for MySQL/MariaDB.
 Below is a sample docker-compose.yml file which launches a MariaDB, PHP-FPM, Nginx and MailHog stack.
 
-Build scripts and sample usage can be found on [github](https://github.com/wytzevanderploeg/docker/php7-mod-mysql).
+Build scripts and sample usage can be found on [github](https://github.com/wytzevanderploeg/docker/tree/master/php7-mod-mysql).
 
 ```docker
 version: '2'
